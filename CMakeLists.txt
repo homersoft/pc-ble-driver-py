@@ -39,8 +39,9 @@ set(NRF_BLE_DRIVER_VERSION "4.1.4")
 # version for NRF51 and one for NRF52
 set(SD_API_VERS "2;5")
 
-# SWIG
-find_package(SWIG REQUIRED)
+# SWIG >= 4.1 is required for correct code generation against the Python 3.12+ C API (up to and
+# including 3.14); older SWIG releases predate those C API changes and fail to build against them.
+find_package(SWIG 4.1 REQUIRED)
 include(${SWIG_USE_FILE})
 
 # nrf-ble-driver
