@@ -1,5 +1,11 @@
 [build-system]
-requires = ["setuptools", "wheel", "scikit-build", "cmake", "ninja", "tox"]
+requires = [
+    "setuptools==84.0.0",
+    "wheel==0.48.0",
+    "scikit-build==0.19.1",
+    "cmake==4.4.3",
+    "ninja==1.13.2",
+]
 
 [flake8]
 exclude = [

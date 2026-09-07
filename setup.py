@@ -75,7 +75,7 @@ def find_version(*file_paths):
 packages = find_packages(exclude=["tests*"])
 
 setup(
-    name="pc_ble_driver_py",
+    name="pc_ble_driver_py_silvair",
     version=find_version("pc_ble_driver_py", "__init__.py"),
     description="Python bindings for the Nordic pc-ble-driver SoftDevice serialization library",
     long_description="A Python interface and library for pc-ble-driver. This allows Python applications to interface "
@@ -100,10 +100,14 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
     ],
     keywords="nordic nrf51 nrf52 ble bluetooth softdevice serialization bindings pc-ble-driver pc-ble-driver-py "
     "pc_ble_driver pc_ble_driver_py",
-    python_requires=">=3.7, <3.11",
+    python_requires=">=3.7",
     install_requires=requirements,
     packages=packages,
     package_data={
